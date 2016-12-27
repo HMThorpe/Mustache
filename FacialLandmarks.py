@@ -5,7 +5,7 @@ import matplotlib
 from matplotlib import pyplot as plt
 
 
-PREDICTOR_PATH="c:/users/heidi/Anaconda2/Lib/site-packages/nbpresent/tests/notebooks/data/shape_predictor_68_face_landmarks.dat"
+PREDICTOR_PATH="../data/shape_predictor_68_face_landmarks.dat"
 
 SCALE_FACTOR=1
 FEATHER_AMOUNT=11  
@@ -39,11 +39,9 @@ def read_im_and_landmarks(fname):
         s = read_landmarks(im)
         return im, s
         
-im1,landmarks1 = read_im_and_landmarks('tswifty-cropx.jpg')
-#im2,landmarks2 = read_im_and_landmarks('moustache_cropx.jpg')
+im1,landmarks1 = read_im_and_landmarks('girlsface-cropx.jpg')
 
 annotate_1 = annotate_landmarks(im1,landmarks1)
-#annotate_2 = annotate_landmarks(im2,landmarks2)
 
-cv2.imwrite('annotate_tswifty.jpg',annotate_1)
-#cv2.imwrite('annotate_im2ax.jpg',annotate_2)
+cv2.imwrite('annotate_girlsface.jpg',annotate_1)
+
