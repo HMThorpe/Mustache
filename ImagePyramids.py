@@ -6,7 +6,8 @@ import skimage
 from skimage import data
 from skimage import io
 from skimage.transform import pyramid_gaussian
-image=skimage.data.imread('tswift_pyramid.jpg') 
+
+image=skimage.data.imread('girlsface_pyramid.jpg') 
 rows, cols, dim = image.shape
 pyramid = tuple(pyramid_gaussian(image, downscale=2))
 composite_image = np.zeros((rows, cols + cols / 2, 3), dtype=np.double)
