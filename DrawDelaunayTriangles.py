@@ -38,7 +38,7 @@ def draw_point(img,p,color):
 delaunay_color =(255,10,10)
 points_color = (0,0,255)
 
-im1 = cv2.imread('tswifty-cropx.jpg')
+im1 = cv2.imread('girlsface-cropx.jpg')
 
 im1_orig = im1.copy()
 
